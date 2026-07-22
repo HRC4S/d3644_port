@@ -15,8 +15,15 @@ const unifrakturCook = UnifrakturCook({
 });
 
 export const metadata: Metadata = {
-  title: "D3644 | Portofolio",
-  description: "Dega Anjam Piani Portofolio",
+  title: "Dega Anjam Piani | Web Developer & Creative Designer",
+  description: "Portofolio Dega — Web Developer, Creative Design, dan Game Developer. Lihat project dan karya terbaru saya.",
+  keywords: ["web developer", "portfolio", "dega anjam piani", "creative design"],
+  openGraph: {
+    title: "Dega Anjam Piani | Portofolio",
+    description: "Web Developer, Creative Design, Game Developer",
+    url: "https://degaanjam.studio",
+    siteName: "D3644",
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
