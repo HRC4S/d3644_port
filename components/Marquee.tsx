@@ -2,30 +2,22 @@
 import { Marquee } from "@/components/ui/marquee";
 import { AnimatedShinyText } from "@/components/ui/animated-shiny-text";
 
-export default function marquee() {
+const items = ["D364", "D364", "D364", "D364"];
+
+export default function MarqueeSection() {
   return (
-    <section className="relative flex flex-col items-center justify-baseline text-center px-6">
+    <section className="relative flex flex-col items-center justify-center text-center px-4 sm:px-6 overflow-hidden">
       <Marquee>
-        <span className="text-9xl font-black tracking-widest font-stretch-ultra-expanded">
-          <AnimatedShinyText className="transition ease-out hover:text-neutral-600 hover:duration-300 hover:dark:text-neutral-400">
-            D.3.6.4
-          </AnimatedShinyText>
-        </span>
-        <span className="text-9xl font-black tracking-widest font-stretch-ultra-expanded">
-          <AnimatedShinyText className="transition ease-out hover:text-neutral-600 hover:duration-300 hover:dark:text-neutral-400">
-            D.3.6.4
-          </AnimatedShinyText>
-        </span>
-        <span className="text-9xl font-black tracking-widest font-stretch-ultra-expanded">
-          <AnimatedShinyText className="transition ease-out hover:text-neutral-600 hover:duration-300 hover:dark:text-neutral-400">
-            D.3.6.4
-          </AnimatedShinyText>
-        </span>
-        <span className="text-9xl font-black tracking-widest font-stretch-ultra-expanded">
-          <AnimatedShinyText className="transition ease-out hover:text-neutral-600 hover:duration-300 hover:dark:text-neutral-400">
-            D.3.6.4
-          </AnimatedShinyText>
-        </span>
+        {items.map((text, i) => (
+          <span
+            key={i}
+            className="text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-black tracking-widest font-stretch-ultra-expanded whitespace-nowrap"
+          >
+            <AnimatedShinyText className="transition ease-out hover:text-neutral-600 hover:duration-300 hover:dark:text-neutral-400">
+              {text}
+            </AnimatedShinyText>
+          </span>
+        ))}
       </Marquee>
     </section>
   );
