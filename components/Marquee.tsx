@@ -2,7 +2,7 @@
 import { Marquee } from "@/components/ui/marquee";
 import { AnimatedShinyText } from "@/components/ui/animated-shiny-text";
 
-const items = ["D364", "D364", "D364", "D364"];
+const items = ["Passion", "Pain", "Patience", "Persistence"];
 
 export default function MarqueeSection() {
   return (
@@ -11,14 +11,12 @@ export default function MarqueeSection() {
         {items.map((text, i) => (
           <span
             key={i}
-            className="text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-black tracking-widest font-stretch-ultra-expanded whitespace-nowrap"
-          >
-            <AnimatedShinyText className="transition ease-out hover:text-neutral-600 hover:duration-300 hover:dark:text-neutral-400">
+            className="font-display text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-black tracking-widest font-stretch-ultra-expanded whitespace-nowrap text-transparent [-webkit-text-stroke:1px_white]">
               {text}
-            </AnimatedShinyText>
           </span>
         ))}
       </Marquee>
+      
     </section>
   );
 }

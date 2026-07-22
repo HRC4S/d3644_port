@@ -472,8 +472,8 @@ export default function SpiderParticles({
 
         {/* Mobile overlay — desktop-only effect notice */}
         <div className="relative h-screen flex flex-col items-center justify-center text-center px-6  -translate-y-8">
-            <MorphingText className="font-black tracking-tighter" texts={["D364©","DEGA©"]} />
-            <HyperText className="-mt-4 text-lg text-white/60 font-extralight tracking-widest">Web Developer, Creative Design, Game Developer.</HyperText>
+            <MorphingText className="font-display text-4xl sm:text-6xl md:text-8xl lg:text-9xl tracking-tighter" texts={["D364©","DEGA©"]} />
+            <HyperText className="mt-10 text-sm text-white/60 font-extralight tracking-widest">Web Developer, Creative Design, Game Developer.</HyperText>
         </div>
 
         {/* Bottom row */}
