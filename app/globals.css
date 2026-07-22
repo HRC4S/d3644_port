@@ -151,5 +151,11 @@
   }
   html {
     @apply font-sans;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
   }
+  html::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge modern */
+}
+  
 }
