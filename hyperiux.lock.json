@@ -1,0 +1,18 @@
+{
+  "components": {
+    "spider-particles": {
+      "version": "1.0.0",
+      "installedAt": "2026-07-22T08:44:38.359Z",
+      "files": {
+        "components/effects/spider-particles/index.jsx": "sha256:87d8af0a91c7cb8f1ff6d3e8c6b0316a4b1cf3df4ad2dbc102a8443842c8fac4"
+      }
+    },
+    "arrow-fill-button": {
+      "version": "1.0.0",
+      "installedAt": "2026-07-22T09:39:13.359Z",
+      "files": {
+        "components/effects/arrow-fill-button/index.jsx": "sha256:5658da37ecf000258b1e4a275b4158358533cdd0230c1c90a77dc1f9f34a152a"
+      }
+    }
+  }
+}

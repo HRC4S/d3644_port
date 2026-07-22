@@ -1,0 +1,13 @@
+{
+  "$schema": "https://vault.hyperiux.com/schema.json",
+  "tailwind": {
+    "config": "tailwind.config.js",
+    "css": "app/globals.css"
+  },
+  "aliases": {
+    "components": "@/components",
+    "effects": "@/components/effects",
+    "hooks": "@/hooks",
+    "lib": "@/lib"
+  }
+}
