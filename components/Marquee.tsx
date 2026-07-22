@@ -1,4 +1,4 @@
-"use Client";
+"use client";
 import { Marquee } from "@/components/ui/marquee";
 import { AnimatedShinyText } from "@/components/ui/animated-shiny-text";
 
