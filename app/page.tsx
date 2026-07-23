@@ -6,6 +6,7 @@ import Marquee from "@/components/Marquee";
 import { Cursor } from "@/components/ui/inverted-mouse";
 import Aboutme from "@/components/About";
 import { SplitReveal } from "@/components/animata/preloader/split-reveal";
+import Content from "@/components/content";
 
 const PRELOAD_IMAGES: string[] = []; // ← didefinisikan di luar, sekali aja
 
@@ -18,6 +19,8 @@ export default function Home() {
         <Hero />
         <Marquee />
         <Aboutme />
+        <Marquee />
+        <Content />
       </main>
       <SplitReveal
         images={PRELOAD_IMAGES}
