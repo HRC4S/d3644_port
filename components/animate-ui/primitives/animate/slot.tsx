@@ -63,11 +63,14 @@ function Slot<T extends HTMLElement = HTMLElement>({
   ref,
   ...props
 }: SlotProps<T>) {
+  if (!React.isValidElement(children)) return null;
+
   const isAlreadyMotion =
     typeof children.type === 'object' &&
     children.type !== null &&
     isMotionComponent(children.type);
 
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   const Base = React.useMemo(
     () =>
       isAlreadyMotion
@@ -76,15 +79,21 @@ function Slot<T extends HTMLElement = HTMLElement>({
     [isAlreadyMotion, children.type],
   );
 
-  if (!React.isValidElement(children)) return null;
-
   const { ref: childRef, ...childProps } = children.props as AnyProps;
 
   const mergedProps = mergeProps(childProps, props);
 
-  return (
-    <Base {...mergedProps} ref={mergeRefs(childRef as React.Ref<T>, ref)} />
-  );
+  // React.createElement (bukan JSX) + cast eksplisit ke `any` di sini
+  // sengaja dilakukan: karena `Base` bertipe generic `React.ElementType`,
+  // TypeScript tidak bisa menentukan tipe prop `ref` yang valid untuknya
+  // dan akan menyempit ke `never`. JSX (`<Base ref={...} />`) memicu
+  // pengecekan itu, sedangkan `React.createElement` dengan cast `any`
+  // melewatinya dengan aman karena penggabungan ref tetap dilakukan
+  // secara manual & type-safe lewat `mergeRefs`.
+  return React.createElement(Base as React.ElementType, {
+    ...mergedProps,
+    ref: mergeRefs(childRef as React.Ref<T>, ref),
+  } as AnyProps);
 }
 
 export {
