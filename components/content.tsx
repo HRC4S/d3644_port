@@ -14,6 +14,11 @@ export default function Content() {
           The page you are looking for does not exist. It might have been moved or deleted. 
         </TextAnimate>
       </div>
+        <div className="mt-4 text-base sm:text-lg text-white text-left">
+        <TextAnimate animation="slideUp" by="word">
+          UDAH AH CAPE MASIH BANYAK PROJECT. 
+        </TextAnimate>
+      </div>
     </section>
   );
 }
