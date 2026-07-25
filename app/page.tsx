@@ -8,7 +8,7 @@ import Aboutme from "@/components/About";
 import { SplitReveal } from "@/components/animata/preloader/split-reveal";
 import Content from "@/components/content";
 
-const PRELOAD_IMAGES: string[] = []; // ← didefinisikan di luar, sekali aja
+const PRELOAD_IMAGES: string[] = ["/images/profile.png","/images/profile-1.png"]; // ← didefinisikan di luar, sekali aja
 
 export default function Home() {
   const [ready, setReady] = useState(false);
@@ -19,7 +19,6 @@ export default function Home() {
         <Hero />
         <Marquee />
         <Aboutme />
-        <Marquee />
         <Content />
       </main>
       <SplitReveal
